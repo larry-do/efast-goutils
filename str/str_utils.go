@@ -1,8 +1,9 @@
 package str_utils
 
 func IsEmpty(str string) bool {
-	if &str == nil || len(str) > 0 {
-		return false
-	}
-	return true
+	return !IsNotEmpty(str)
+}
+
+func IsNotEmpty(str string) bool {
+	return &str != nil && len(str) > 0
 }
